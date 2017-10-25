@@ -1,0 +1,18 @@
+{
+  "name": "CoolSamlApp",
+  "version": "1.0.0",
+  "description": "IDCS Demo SAML App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "indranil.jha@oracle.com",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-saml": "*", 
+    "body-parser": "*"
+  }
+}

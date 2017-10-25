@@ -1,0 +1,8 @@
+header
+  div
+    if !user
+      a(href="/auth/idcs") Login with IDCS
+    else
+      a(href="/auth/logout2") Global Logout
+      span(style="padding: 0 80px;")
+      a(href="/auth/locallogout") Local Logout

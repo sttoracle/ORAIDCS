@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Welcome #{user["Display Name"]}
+  
+  h2 Profile Attributes
+  
+  table(border='1')
+   thead
+    tr
+     th Attribute
+     th Value
+   tbody
+   each val, key in user
+     if(!key.startsWith('_'))
+      tr
+       td #{key}
+       td #{val}
+  p

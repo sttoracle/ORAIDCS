@@ -1,0 +1,87 @@
+<div class="container" ng-controller="regController">
+        <div class="row row-content">
+               <div class="col-xs-12">
+                    <h2 class="text-center">IDCS Registration</h2> 
+                    <p style="padding:10px;"></p>
+               </div>
+               <div class="col-xs-12">
+               <form class="form-horizontal" name="registerForm" ng-submit="register()" novalidate>
+                   <div class="form-group" ng-class="{ 'has-error' : registerForm.firstname.$error.required && !registerForm.firstname.$pristine }">
+                        <label for="firstname" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-4">
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name" ng-model="registrationuser.name.givenName" required>
+                        <span ng-show="registerForm.firstname.$error.required && !registerForm.firstname.$pristine" class="help-block">Your First name is required.</span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : registerForm.lastname.$error.required && !registerForm.lastname.$pristine }">
+                        <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name" ng-model="registrationuser.name.familyName" required>
+                            <span ng-show="registerForm.lastname.$error.required && !registerForm.lastname.$pristine" class="help-block">Your Last name is required.</span>
+                        </div>
+                    </div>
+                   <div class="form-group" ng-if="!useremailcombo" ng-class="{ 'has-error' : registerForm.userName.$error.required && !registerForm.userName.$pristine }">
+                        <label for="userName" class="col-sm-2 control-label">User Name</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter User Name" ng-model="registrationuser.userName" check-user-exists=true required>
+                            <span ng-show="registerForm.userName.$error.required && !registerForm.userName.$pristine" class="help-block">User Name is required.</span>
+                        </div>
+                       <span ng-show="registerForm.userName.$loading">Checking availability...</span>
+                       <span ng-show="registerForm.userName.$error.unique" style="color:maroon">
+                           <strong>{{usernameMessage}}</strong>
+                        </span>
+                       <span ng-show="!registerForm.userName.$error.unique" style="color:green">
+                           <strong>{{usernameMessage}}</strong>
+                        </span>
+                    </div>
+                   <div class="form-group"  ng-class="{ 'has-error has-feedback' : registerForm.emailid.$invalid && !registerForm.emailid.$pristine }">
+                        <label for="emailid" class="col-sm-2 control-label">{{idemaillabel}}</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter {{idemaillabel}}" ng-model="email" check-user-exists=true required>
+                            <span ng-show="registerForm.emailid.$invalid && !registerForm.emailid.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            <span ng-show="(registerForm.emailid.$invalid ||registerForm.emailid.$error.required) && !registerForm.emailid.$pristine && !registerForm.emailid.$error.unique" class="help-block">Enter a valid {{idemaillabel}}</span>
+                        </div>
+                        <span ng-show="registerForm.emailid.$loading && useremailcombo">Checking availability...</span>
+                        <span ng-show="registerForm.emailid.$error.unique && useremailcombo" style="color:maroon">
+                           <strong>{{usernameMessage}}</strong>
+                        </span>
+                        <span ng-show="!registerForm.emailid.$error.unique && useremailcombo && registerForm.emailid.$dirty" style="color:green">
+                           <strong>{{usernameMessage}}</strong>
+                        </span>
+                   </div>
+                   <div class="form-group">
+                       <label class="col-sm-2 control-label"> </label>
+                        <input type="checkbox" ng-model="useremailcombo" ng-click="changeUserEmailForm()"> Use the email address as the user name 
+                   </div>
+                   <!--div class="form-group" ng-class="{ 'has-error' : registerForm.password.$error.required && !registerForm.password.$pristine }">
+                        <label for="password" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" ng-model="registrationpwd.password" required>
+                            <span ng-show="registerForm.password.$error.required && !registerForm.password.$pristine" class="help-block">Password is required.</span>
+                        </div>
+                    </div-->
+                   <!--div class="form-group" ng-class="{ 'has-error' : registerForm.confirmPassword.$error.equal && !registerForm.confirmPassword.$pristine }">
+                        <label for="confirmPassword" class="col-sm-2 control-label">Confirm Password</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Enter Password Again" ng-model="confirmPassword" equal="registrationpwd.password" required>
+                            <span ng-show="registerForm.confirmPassword.$error.equal  && !registerForm.confirmPassword.$pristine" class="help-block">Passwords do not match.</span>
+                        </div>
+                    </div-->
+                   
+                    <div class="form-group">
+                         <div class="col-sm-offset-2 col-sm-4">
+                            <button type="submit" class="btn btn-primary pull-right" ng-disabled="registerForm.$invalid">Register</button>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-show="success">
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>Registration successful. Please check email for further instructions.</strong>
+                        </div>
+                    </div>  
+               </form>
+            </div>
+        </div>
+</div>
