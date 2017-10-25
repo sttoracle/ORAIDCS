@@ -1,0 +1,44 @@
+{
+  "author": {
+    "email": "indranil.jha@oracle.com",
+    "name": "Indranil Jha",
+    "url": "https://www.oracle.com/cloud/paas.html"
+  },
+  "dependencies": {
+    "node-rest-client": "^1.8.0",
+    "passport-oauth2": "1.x.x"
+  },
+  "description": "Passport strategy for Oracle Identity Cloud Service",
+  "devDependencies": {
+    "chai": "2.x.x",
+    "chai-passport-strategy": "1.x.x",
+    "make-node": "0.3.x",
+    "mocha": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "keywords": [
+    "passport",
+    "Oracle",
+    "Cloud",
+    "IDCS",
+    "auth",
+    "Authn",
+    "Authentication",
+    "Identity"
+  ],
+  "license": "MIT",
+  "main": "./lib",
+  "maintainers": [
+    {
+      "email": "indranil.jha@oracle.com",
+      "name": "indraniljha"
+    }
+  ],
+  "name": "passport-oauth-oidcs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}
