@@ -22,7 +22,7 @@ The tool refers to the instance running inside VirtualBox IDCS Demo image. It ca
 	nohup node server.js &`
 	
 	```
-* Access the App from browser – <http://secureoracle.idcs.internal.oracle.com:9092>
+* Access the App from browser – <http://host:9092>
 
 
 #### Usage

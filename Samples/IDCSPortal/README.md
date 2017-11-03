@@ -6,18 +6,14 @@ This tool runs on Node JS platform independently of the IDCS instance it connect
 
 ### Setup:  
 
-#### Pre-requisites:  
-
-The tool refers to the instance running inside VirtualBox IDCS Demo image. It can be easily accommodated to use against any IDCS instance by modifying configuration values present inside a single property file (secrets.js). This description assumes that the tool is getting used inside the IDCS Demo image.
-
 #### OAuth Client Setup:
 
 * Go the [IDCS admin console]
-(https://mydemotenant1.idcs.internal.oracle.com:8943/ui/v1/adminconsole)
-* Login using admin credentials – `admin@oracle.com`/`Oracle123`
-* Go to the Applications tab and open  **AdminApp**.
+(https://host/ui/v1/adminconsole)
+* Login using admin credentials – 
+* Go to the Applications tab and create  **AdminApp**.
 * Note the **Client ID** and **Client Secret** of **AdminApp**. These will be used later on the tool.
-* Change the **Redirect URL** value under `Configuration -> Client Configuration` section to `http://mydemotenant1.idcs.internal.oracle.com:9088/api/login/callback`
+* Change the **Redirect URL** value under `Configuration -> Client Configuration` section to `http://host:9088/api/login/callback`
  
 #### Tool Setup:
 * Download [IDCSPortal]() in `zip` format
@@ -37,23 +33,23 @@ The tool refers to the instance running inside VirtualBox IDCS Demo image. It ca
 		
 		  sessionSecret: process.env.SESSION_SECRET || 'Your session secret goes here',
 		    
-		  idcshost: "mydemotenant1.idcs.internal.oracle.com",
+		  idcshost: "host",
 		    
-		  idcsport: "8943",
+		  idcsport: "443",
 		
 		  idcs: {
-		    discoveryURL: 'https://mydemotenant1.idcs.internal.oracle.com:8943/.well-known/idcs-configuration',
-		    clientID: '4bbff9ed482e4afabb66ffc6a4190c6e',
-		    clientSecret: 'ad8d77a7-2654-4851-b8b5-847e768740e2',
-		    callbackURL: 'http://127.0.0.1:9088/api/login/callback',
-		   	profileURL: 'https://mydemotenant1.idcs.internal.oracle.com:8943/admin/v1/Me',
+		    discoveryURL: 'https://host/.well-known/idcs-configuration',
+		    clientID: '',
+		    clientSecret: '',
+		    callbackURL: 'http://host:9088/api/login/callback',
+		   	profileURL: 'https://host/admin/v1/Me',
 		    passReqToCallback: true
 		  },
 		    
 		  idcsanon: {
-		    tokenURL: 'https://mydemotenant1.idcs.internal.oracle.com:8943/oauth2/v1/token',
-		    clientID: '4bbff9ed482e4afabb66ffc6a4190c6e',
-		    clientSecret: 'ad8d77a7-2654-4851-b8b5-847e768740e2',
+		    tokenURL: 'https://host/oauth2/v1/token',
+		    clientID: '',
+		    clientSecret: '',
 		    scope: 'urn:opc:idm:__myscopes__',
 		    grant_type: 'client_credentials'
 		  }
@@ -74,8 +70,8 @@ The tool refers to the instance running inside VirtualBox IDCS Demo image. It ca
 	nohup node server.js &`
 	
 	```
-* Access the App from browser – <http://mydemotenant1.idcs.internal.oracle.com:9088>
-* If prompted, login using admin credentials – `admin@oracle.com`/`Oracle123`
+* Access the App from browser – <http://host:9088>
+* If prompted, login using admin credentials
 
 
 #### Usage
