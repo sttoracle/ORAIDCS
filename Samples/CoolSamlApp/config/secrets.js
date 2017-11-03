@@ -8,14 +8,14 @@ module.exports = {
   sessionSecret: process.env.SESSION_SECRET || 'Your session secret goes here',
 
   idcs: {
-  	entryPoint: "https://secureoracle.idcs.internal.oracle.com:8943/fed/v1/idp/initiatesso?"
+  	entryPoint: "https://host/fed/v1/idp/initiatesso?"
       + "&providerid=CoolSamlApp",
 
       path: '/auth/provider/callback',
 
-      logoutUrl: "https://secureoracle.idcs.internal.oracle.com:8943/sso/v1/user/logout?"
+      logoutUrl: "https://host/sso/v1/user/logout?"
       + "binding=urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-      + "&RelayState=http:///secureoracle.idcs.internal.oracle.com:9092/auth/logout/callback",
+      + "&RelayState=http:///127.0.0.1:9092/auth/logout/callback",
 
       acceptedClockSkewMs: -1
   }
