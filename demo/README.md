@@ -1,4 +1,4 @@
-#Oracle Identity Cloud Service
+# Oracle Identity Cloud Service
 
 Oracle Identity Cloud Service (**IDCS**) provides an innovative, fully integrated service that delivers all the core identity and access management capabilities through a multi-tenant Cloud platform. 
 
