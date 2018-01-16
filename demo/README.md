@@ -12,7 +12,7 @@ Detailed documentation on how to get started with Oracle Identity Cloud Service 
 
 This demonstration focuses on the essential and useful features of IDCS for `Standard User`, `Adminstrator` and `Developer` communities to help you understand the benefits of using our next generation Identity and Access management solution.
 
-The **Key Performance Indicators** we will focus are - **Deep Integration**, **facilitate Hybrid envirnment operation**, **Fast Integration**, **next-gen Security services**
+The **Key Performance Indicators** we will focus on are - **Deep Integration**, **facilitate Hybrid envirnment operation**, **Fast Integration**, **next-gen Security services**
 
 
 Here is the list of topics we will cover in the demonstration -
