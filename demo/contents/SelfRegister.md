@@ -1,41 +1,92 @@
-# User On-boarding - Delimited File
+# B2C: Self-Registration
 
 
-### **STEP 1**: Obtain Upload CSV file
+## Create External Group
 
-- Obtain the CSV file **Users.csv** provided here. Inspect the content of the file opening it in your favorite editor.
+- Go to IDCS Admin Console -> Groups tab 
+
+- Add group `OurPartner`
+
+	![](images/SelfRegister-1.png)
+
+- Click on `Finish`
+
+	![](images/SelfRegister-2.png) 
+
+
+## Create Registration profile  - (Persona: Administrator)
+
+- Login to IDCS Admin Console as an Administrator. Go to the **Settings** tab and click on the **Self Registration** menu from the sidebar.
+
+	![](images/SelfRegister-3.png)
+
+- Click on **Add Profile**
+
+- On the Profile creation page, enter `Profile Name -` **`OurPartner`**. 
+
+	![](images/SelfRegister-4.png)
+
+- Click on **Add** under `Assign to Group` section. Select the external group **`OurPartner`** and click on **OK**
+
+	![](images/100/SelfRegister-5.png)
+
+- Under `Self-Registration Content` section, enter `Registration Page Name -` **`OurPartner`**.
+
+	![](images/SelfRegister-6.png)
+
+- Review the remaining sections. Keep the default values.
+
+	![](images/SelfRegister-7.png)
+
+- Click on **Save** and then click **Yes** on the **Confirmation**.
+
+	![](images/SelfRegister-8.png)
 	
-	![](images/UO-File-1.png)
+	![](images/SelfRegister-9.png)
+
+- Click on **Activate** and then **Activate Profile**
+
+	![](images/SelfRegister-10.png)
 	
-- Make sure that your target End User with proper ***Email Address*** is present on the file. If not there, make necessary changes.
+	![](images/SelfRegister-11.png)
 
+- Note the **`Profile ID`** and create the self-registration link in the following format :
 
-### **STEP 2**: Import File in IDCS
-
-- Go to IDCS Admin console using your Administrator Account credentials as described [here](#adminconsole). Ensure that you are on the **Users** tab
-
-- Click on the **Import** button. 
-
-	![](images/UO-File-2.png)
+	```js
+	https://<tenant>.identity.oraclecloud.com/ui/v1/signup?profileid=<Noted Profile ID>
+	```
+	<blockquote>
+	This link can be forwarded in the registration invitation email or other channel to the external users.
+	</blockquote>
 	
-- Select the **CSV** file. Click on **Import**
+	![](images/SelfRegister-12.png)
 
-    ![](images/UO-File-3.png)
+## Self Registration - (Persona: End-User)
 
-- Go to the **Jobs** tab in Admin Console. Verify that the Import Job finished successfully. Click on **View
+- Click on the Registration link supplied.
 
-    ![](images/UO-File-4.png)
-    
-- Click on **View Details** button. This will show the detailed information on the ***Import** job. Inspect the details.
+	![](images/SelfRegister-13.png)
 
-    ![](images/UO-File-5.png) 
+- Enter required profile information and **submit**
 
-### **STEP 3**: Verify User Creation
+	![](images/SelfRegister-14.png)
 
-- Go to the **Users** tab in Admin Console. Verify that the new users are visible on the console.
+- On the Success message page, click on **continue**. **Skip** the 2-step verification.
 
-    ![](images/UO-File-6.png)
+	![](images/SelfRegister-15.png)
+	
+	![](images/SelfRegister-16.png)
 
-- Click on your target End-User and verify User's detailed attribute information
+- From the `My Apps` page access the `My Profile` menu. 
 
-    ![](images/UO-File-7.png)
+	![](images/SelfRegister-17.png)
+	
+	![](images/SelfRegister-18.png)
+
+- Go to the `My Access` tab. Ensure that user is part of the group configured in the registration profile. 
+
+	<blockquote>
+	If the group is assigned to one or more apps in IDCS, the new user will automatically gain access to those apps, and the apps will be visible on the My Apps page.
+	</blockquote>
+	
+	![](images/SelfRegister-19.png)

@@ -1,41 +1,44 @@
-# User On-boarding - Delimited File
+# Multi Factor Authentication
 
 
-### **STEP 1**: Obtain Upload CSV file
+## Configure MFA - (Persona: Administrator)
 
-- Obtain the CSV file **Users.csv** provided here. Inspect the content of the file opening it in your favorite editor.
+- Go to IDCS Admin Console -> Security tab. Select `MFA` from the Sidebar to the left.
+
+- Select `All Users` for the label **Select the users that you want to enable MFA for:**
+
+- Select all the options for **Select the factors that you want to enable:**
+
+	![](images/MFA-1.png)
+
+- Keep all other parameters to their Default values. Click on `Save` 
+
+	![](images/MFA-2.png)
 	
-	![](images/UO-File-1.png)
 	
-- Make sure that your target End User with proper ***Email Address*** is present on the file. If not there, make necessary changes.
+## Enroll in MFA - (Persona: End-User)
 
+- On the **Enable 2-Step Verification** page, click on `Enable`
 
-### **STEP 2**: Import File in IDCS
+	![](images/MFA-3.png)
 
-- Go to IDCS Admin console using your Administrator Account credentials as described [here](#adminconsole). Ensure that you are on the **Users** tab
+- Select the method `Mobile Number`
 
-- Click on the **Import** button. 
+	![](images/MFA-4.png)
 
-	![](images/UO-File-2.png)
+- Provide your mobile number and click on `Send`
+
+	![](images/MFA-5.png)
 	
-- Select the **CSV** file. Click on **Import**
+- Access the text message on your mobile and note the 6-digit One-time code on the message.
+	
+	![](images/MFA-6.png)
 
-    ![](images/UO-File-3.png)
+- Provide the 6-git code on the enrollment page and click on `Verify`
 
-- Go to the **Jobs** tab in Admin Console. Verify that the Import Job finished successfully. Click on **View
-
-    ![](images/UO-File-4.png)
-    
-- Click on **View Details** button. This will show the detailed information on the ***Import** job. Inspect the details.
-
-    ![](images/UO-File-5.png) 
-
-### **STEP 3**: Verify User Creation
-
-- Go to the **Users** tab in Admin Console. Verify that the new users are visible on the console.
-
-    ![](images/UO-File-6.png)
-
-- Click on your target End-User and verify User's detailed attribute information
-
-    ![](images/UO-File-7.png)
+	![](images/MFA-7.png)
+	
+- Ensure that the success enrollment message is displayed. Click on `Done`
+	
+	![](images/MFA-8.png)
+   ![](images/MFA-9.png)

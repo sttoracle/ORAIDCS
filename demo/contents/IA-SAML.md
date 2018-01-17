@@ -1,41 +1,128 @@
-# User On-boarding - Delimited File
+# Integrate Apps - SAML
 
 
-### **STEP 1**: Obtain Upload CSV file
+- Download IDCS Metadata to a local XML file 
 
-- Obtain the CSV file **Users.csv** provided here. Inspect the content of the file opening it in your favorite editor.
+	![](images/IA-SAML-1.png)
+
+- Login to salesforce.com tenant with Administrator credentials
+
+- Go to Single Sign-On settings under  Security Controls menu
+
+- Enable Federated Single Sign-On 
+
+	![](images/IA-SAML-2.png)
+
+- Import IDCS Metadata - Use New from Metadata File option
+ 
+- Save the configuration 
+
+	![](images/IA-SAML-3.png)
+
+    ![](images/IA-SAML-4.png)
+
+    ![](images/IA-SAML-5.png)
+
+    ![](images/IA-SAML-6.png)
+
+    ![](images/IA-SAML-7.png) Change
+
+    ![](images/IA-SAML-8.png) Change
+
+- Note the Organization ID value 
+
+	![](images/IA-SAML-9.png)  Change
+
+- Note the Tenant Domain Name value 
+
+	![](images/IA-SAML-10.png) Change
+
+- Go to IDCS Admin console -> Applications tab
+
+- Click on Add button and select App Catalog 
+
+	![](images/IA-SAML-11.png)
+
+- Search for Salesforce App and Add 
+
+	![](images/IA-SAML-12.png)
 	
-	![](images/UO-File-1.png)
+	![](images/IA-SAML-13.png)
+
+
+- On the first page of Configuration screen provide the previously noted Organization ID and Domain Name values
+
+- Click on Next 
+
+	![](images/IA-SAML-14.png)
+
+- Click on Finish button  
+
+	![](images/IA-SAML-15.png)
+
+- Activate the application 
+
+	![](images/IA-SAML-16.png)
+
+## Assign Apps to Group - (Persona: Administrator)
+
+- Go to IDCS Admin Console -> Groups tab 
+
+	![](images/IA-SAML-17.png)
+
+- Add group `Employee`. Check the box `User can request access`. 
+
+	![](images/IA-SAML-18.png)
+
+- Click on `Finish` 
+
+	![](images/IA-SAML-19.png)
+
+- Go to the `Access` tab. Click on `Assign`. 
+
+- Select `Salesforce` and confirm 
+
+	![](images/IA-SAML-20.png)
 	
-- Make sure that your target End User with proper ***Email Address*** is present on the file. If not there, make necessary changes.
-
-
-### **STEP 2**: Import File in IDCS
-
-- Go to IDCS Admin console using your Administrator Account credentials as described [here](#adminconsole). Ensure that you are on the **Users** tab
-
-- Click on the **Import** button. 
-
-	![](images/UO-File-2.png)
+	![](images/IA-SAML-21.png)
 	
-- Select the **CSV** file. Click on **Import**
+	
+## Request Group - (Persona: End-User)
 
-    ![](images/UO-File-3.png)
+- From MyApps page click on `Add` access request button.
 
-- Go to the **Jobs** tab in Admin Console. Verify that the Import Job finished successfully. Click on **View
+	![](images/IA-SAML-22.png)
 
-    ![](images/UO-File-4.png)
-    
-- Click on **View Details** button. This will show the detailed information on the ***Import** job. Inspect the details.
+- From the **Groups** tab, select `Employee` group
 
-    ![](images/UO-File-5.png) 
+	![](images/IA-SAML-23.png)
+	
+- Click on `+` sign to request access to the group. Provide justification on the resulting popup page. Click on `OK`
 
-### **STEP 3**: Verify User Creation
+	![](images/IA-SAML-24.png)
+	
+	![](images/IA-SAML-25.png)
+	
+- Go to `My Profile` section from menu located top-right
 
-- Go to the **Users** tab in Admin Console. Verify that the new users are visible on the console.
+	![](images/IA-SAML-26.png)
+	
+- Ensure that `Employee` group is visible under **My Access** sub-tab
+	
+	![](images/IA-SAML-27.png)
+	
+- Go to `My Apps` section from menu located top-right
 
-    ![](images/UO-File-6.png)
+	![](images/IA-SAML-28.png)
+	
+- Ensure that Salesforce applications are visible now on the **MyApps** page
+	
+	![](images/IA-SAML-29.png)
 
-- Click on your target End-User and verify User's detailed attribute information
 
-    ![](images/UO-File-7.png)
+## Verify Apps SSO - (Persona: End-User)
+
+- Click on the `Salesforce Chatter` app. 
+- Ensure that user is automatically logged-in to Salesforce Chatter (**SSO**)
+
+	![](images/IA-SAML-30.png)
