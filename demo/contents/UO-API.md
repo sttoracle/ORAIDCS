@@ -1,17 +1,13 @@
-# Oracle Public Cloud Integration
+# User On-boarding - API
 
+The Oracle Identity Cloud Service REST APIs support SCIM 2.0 compliant endpoints with standard SCIM 2.0 core schemas and Oracle schema extensions to programmatically manage users, groups, applications, and identity functions, such as password management and administrative tasks. 
 
-### IDCS is baked in Oracle Public Cloud
+To make REST API calls to your Oracle Identity Cloud Service environment, you need an OAuth2 access token to use for authorization. The access token provides a session (with scope and expiration), that your client application can use to perform tasks in Oracle Identity Cloud Service.
 
+Click [here](UO-API.ipynb) to go through the flow of on-boarding a sample user using API.
 
-### Access Oracle Cloud Services
+####Additional Resources:
 
-- Click on **Dashboard** to come back to My Services page again. Display the sidebar by clicking on the bar in the upper left hand corner. then click on **Services** to display available Oracle Cloud Services.
+[IDCS REST API](https://docs.oracle.com/en/cloud/paas/identity-cloud/idcsa/index.html)
 
-	![](images/OPCIntegration-1.png)
-	
-	![](images/OPCIntegration-2.png)
-	
-- Click on the Service **Analytics**. Observe that the logged in user has successfully single signed-on to the Analytics service console
-
-	![](images/OPCIntegration-3.png)
+[What is SCIM](http://www.ateam-oracle.com/what-is-scim/)
