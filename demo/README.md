@@ -20,38 +20,38 @@ Here is the list of topics we will cover in the demonstration -
 * [Oracle Public Cloud Integration](contents/OPCIntegration.md)
 
 * User On-boarding 
-	* [Enterprise Directory Synchronization](contents/OPCIntegration.md)
+	* [Enterprise Directory Synchronization](contents/UO-EDS.md)
 	* [Delimited File](contents/UO-File.md)
 	* [API](contents/UO-API.md)
 
-* [Integrate Apps](contents/OPCIntegration.md) 
-	* [Provisioning Application](contents/OPCIntegration.md)
-	* [SAML compliant Application](contents/OPCIntegration.md)
-	* [On-premise Application](contents/OPCIntegration.md)
-	* [Arbitary Web Application](contents/OPCIntegration.md)
+* [Integrate Apps](contents/IA.md) 
+	* [Provisioning Application](contents/IA-Prov.md)
+	* [SAML compliant Application](contents/IA-SAML.md)
+	* [On-premise Application](contents/IA-SSO.md)
+	* [Arbitary Web Application](contents/IA-SFF.md)
 
-* [Multi-Factor Authentication](contents/OPCIntegration.md)
+* [Multi-Factor Authentication](contents/MFA.md)
 
-* [Enterprise/Social Identity Provider Integration](contents/OPCIntegration.md)
+* [Enterprise/Social Identity Provider Integration](contents/IDP.md)
 
-* [Adaptive Access Control](contents/OPCIntegration.md)
+* [Adaptive Access Control](contents/AAC.md)
 
 * Branding and Login Customization
 
-	* [Branding Customization](contents/OPCIntegration.md)
-	* [Login Customization](contents/OPCIntegration.md)
+	* [Branding Customization](contents/Branding.md)
+	* [Login Customization](contents/CustomLogin.md)
 
-* [Reporting and Diagnostics](contents/OPCIntegration.md)
+* [Reporting and Diagnostics](contents/RD.md)
 
-	* [Reporting](contents/OPCIntegration.md)
-	* [Diagnostics](contents/OPCIntegration.md)
+	* [Reporting](contents/RD-Reporting.md)
+	* [Diagnostics](contents/RD-Diag.md)
 
-* [OpenID and OAuth Service Provider](contents/OPCIntegration.md)
+* [OpenID and OAuth Service Provider](contents/OO.md)
 
-	* [OpenID Connect Service](contents/OPCIntegration.md)
-	* [OAuth Service](contents/OPCIntegration.md)
+	* [OpenID Connect Service](contents/OO-OpenID.md)
+	* [OAuth Service](contents/OO-OAuth.md)
 
-* [Programmatic Access](contents/OPCIntegration.md)
+* [Programmatic Access](contents/PA.md)
 
-* **B2C:** [Self-Registration](contents/OPCIntegration.md)
+* **B2C:** [Self-Registration](contents/SelfRegister.md)
 	
