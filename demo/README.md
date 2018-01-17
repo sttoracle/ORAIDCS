@@ -21,7 +21,7 @@ Here is the list of topics we will cover in the demonstration -
 
 * User On-boarding 
 	* [Enterprise Directory Synchronization](contents/OPCIntegration.md)
-	* [Delimited File](contents/UO-Filew.md)
+	* [Delimited File](contents/UO-File.md)
 	* [API](contents/OPCIntegration.md)
 
 * [Integrate Apps](contents/OPCIntegration.md) 
