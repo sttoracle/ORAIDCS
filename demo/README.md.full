@@ -24,18 +24,34 @@ Here is the list of topics we will cover in the demonstration -
 	* [Delimited File](contents/UO-File.md)
 	* [API](contents/UO-API.md)
 
-* Integrate Apps
+* [Integrate Apps](contents/IA.md) 
+	* [Provisioning Application](contents/IA-Prov.md)
 	* [SAML compliant Application](contents/IA-SAML.md)
+	* [On-premise Application](contents/IA-SSO.md)
+	* [Arbitary Web Application](contents/IA-SFF.md)
 
 * [Multi-Factor Authentication](contents/MFA.md)
 
+* [Enterprise/Social Identity Provider Integration](contents/IDP.md)
+
+* [Adaptive Access Control](contents/AAC.md)
+
 * Branding and Login Customization
 
-* Reporting and Diagnostics
+	* [Branding Customization](contents/Branding.md)
+	* [Login Customization](contents/CustomLogin.md)
 
-* OpenID and OAuth Service Provider
+* [Reporting and Diagnostics](contents/RD.md)
 
-* Programmatic Access
+	* [Reporting](contents/RD-Reporting.md)
+	* [Diagnostics](contents/RD-Diag.md)
+
+* [OpenID and OAuth Service Provider](contents/OO.md)
+
+	* [OpenID Connect Service](contents/OO-OpenID.md)
+	* [OAuth Service](contents/OO-OAuth.md)
+
+* [Programmatic Access](contents/PA.md)
 
 * **B2C:** [Self-Registration](contents/SelfRegister.md)
 	
