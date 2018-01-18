@@ -25,3 +25,4 @@ In order for Users to synchronize to IDCS, they must have their the following at
 * An Approach to AD Bridge HA using Docker and Windows Containers - [OTN Link](http://www.oracle.com/technetwork/articles/idm/gutierrez-idcs-idbridge-3960710.html)
 
 <iframe src="http://www.oracle.com"></iframe>
+
