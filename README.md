@@ -4,11 +4,11 @@ Oracle Identity Cloud Service (**IDCS**) provides an innovative, fully integrate
 
 Get yourself familiar with **IDCS** service
 
-* <a href="demo" target="_blank">Demo</a>
+* <a href="/Oracle-Identity-Cloud-Service/demo" target="_blank">Demo</a>
 
-* <a href="Samples" target="_blank">Samples</a>
+* <a href="/Oracle-Identity-Cloud-Service/Samples" target="_blank">Samples</a>
 
-* <a href="ToolsAndAssets" target="_blank">Tools and Assets</a>
+* <a href="/Oracle-Identity-Cloud-Service/ToolsAndAssets" target="_blank">Tools and Assets</a>
 
 
 For more details see [Oracle Identity Cloud Service](https://cloud.oracle.com/en_US/identity).
