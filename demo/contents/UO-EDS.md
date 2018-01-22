@@ -23,7 +23,6 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 * Log into Active Directory Machine as Administrator
 
 * Copy install script file [createDomain.ps1](resources/createDomain.ps1) onto your Active Directory machine.
-	[populateAD.ps1 ](resources/populateAD.ps1) 
 	
 * Right click on **createDomain.ps1** and choose run with PowerShell.
 
