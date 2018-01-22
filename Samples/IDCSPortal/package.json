@@ -5,7 +5,7 @@
   "main": "server.js",
   "author": "indranil.jha@oracle.com",
   "dependencies": {
-    "async": "^2.1.2",
+    "async": "2.1.2",
     "body-parser": "*",
     "connect-ensure-login": "*",
     "connect-flash": "*",
