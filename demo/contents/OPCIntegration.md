@@ -1,4 +1,4 @@
-# Oracle Public Cloud Integration
+# Oracle Public Cloud One-Stop Access
 
 
 ### IDCS is baked in Oracle Public Cloud

@@ -17,7 +17,7 @@ The **Key Performance Indicators** we will focus on are - **Deep Integration**, 
 
 Here is the list of topics we will cover in the demonstration -
 
-* [Oracle Public Cloud Integration](contents/OPCIntegration.md)
+* [Oracle Public Cloud One-Stop Access](contents/OPCIntegration.md)
 
 * User On-boarding 
 	* [Enterprise Directory Synchronization](contents/UO-EDS.md)
