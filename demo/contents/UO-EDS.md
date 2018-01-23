@@ -154,12 +154,10 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 * Review the synchronization summary displayed :
    
-   ````
-	How many users were successfully imported.
+   ````How many users were successfully imported.
 	How many groups were successfully imported.
 	How many users failed to import.
 	How many groups failed to import.
-	
 	````
 	
 ![](images/UO-EDS-32.jpg)
