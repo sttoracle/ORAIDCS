@@ -51,7 +51,7 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 ![](images/UO-EDS-8.jpg)
 ![](images/UO-EDS-9.jpg)
 
-* The Users, OUs and groups should now exist.
+* The Users, OU's and groups should now exist.
 
 ![](images/UO-EDS-10.jpg)
 ![](images/UO-EDS-11.jpg)
@@ -99,7 +99,7 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 ![](images/UO-EDS-21.jpg)
 
-* After succssful connection test, click on **Next**
+* After successful connection test, click on **Next**
 
 ![](images/UO-EDS-22.jpg)
 
@@ -115,10 +115,10 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 ![](images/UO-EDS-25.jpg)
 
-* In the **Select Organizational Units (OUs) for Users** section, select the OU's containing the users that you want to synchronize with IDCS. Select **DemoUsers** OU.
+* In the **Select Organizational Units (OU's) for Users** section, select the OU's containing the users that you want to synchronize with IDCS. Select **DemoUsers** OU.
 
 
-* In the **Select organizational units(OUs) for Groups** Section, select OU's containing the groups to be synchronized with IDCS. Select **Groups** OU.
+* In the **Select organizational units(OU's) for Groups** Section, select OU's containing the groups to be synchronized with IDCS. Select **Groups** OU.
 
 
 * In the **Set import frequency** section, select the interval at which the agent will run and synchronize users and groups with IDCS. Change the interval to something shorter than 1 Hour. (1-5 minutes are good options)
@@ -144,6 +144,8 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 ![](images/UO-EDS-30.jpg)
 
+## Initial Synchronization
+
 * Click **Import** to manually start the import job.
 
 * Refresh the page until the synchronization is completed.
@@ -151,12 +153,17 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 ![](images/UO-EDS-31.jpg)
 
 * Review the synchronization summary displayed :
+   
+   ````js
 	How many users were successfully imported.
 	How many groups were successfully imported.
 	How many users failed to import.
 	How many groups failed to import.
 	
+	
 ![](images/UO-EDS-32.jpg)
+
+## Verify Synchronization
 
 * In the IDCS admin console, click **Users**. 
 
@@ -170,11 +177,14 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 ![](images/UO-EDS-34.jpg)
 
-* Click the group **Employees** and then click **Users** tab. The group membership reflects the membership from Active Directory. Ensure **Danny Crane** is part of the **Employees** group.
+* Click the group **Employees** and then click **Users** tab. The group membership reflects the membership from Active Directory. Verify that **Danny Crane** is part of the **Employees** group.
 
 ![](images/UO-EDS-35.jpg)
 
-* Click the group **OurVendor** and then click **Users** tab. Ensure that no user is assigned to the group.
+
+## Synchronize Changes in Active Directory
+
+* From IDCS admin console, click the group **OurVendor** and then click **Users** tab. Ensure that no user is assigned to the group.
 
 ![](images/UO-EDS-36.jpg)
 
@@ -184,16 +194,25 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 ![](images/UO-EDS-38.jpg)
 ![](images/UO-EDS-39.jpg)
 
-* Run the **Import** job of the bridge again from IDCS admin console. Refresh untill finished.
+* Run the **Import** job of the bridge again from IDCS admin console. Refresh until finished.
 
 ![](images/UO-EDS-40.jpg)
 
-* Verify that **John Wells** is now a member of the group **OurVendor**.
+* Verify that **John Wells** is now a member of the group **OurVendor** in IDCS.
 
 ![](images/UO-EDS-41.jpg)
- 
 
-## Addtional Resources
+## Verify Activation Email
+
+* Login to Gmail as [demoidcs@gmail.com](). Go to the **User1** label. Verify that there is an activation email from IDCS for **Danny Crane**
+
+![](images/UO-EDS-42.jpg)
+
+* Open and review the email. Do not click on the **Activate Your Account** button yet. We will do that during User initial login flow. 
+ 
+![](images/UO-EDS-43.jpg)
+
+## Additional Resources
 
 * [Understanding the Bridge](https://docs.oracle.com/en/cloud/paas/identity-cloud/uaids/understanding-bridge.html)
 
