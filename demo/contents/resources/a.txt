@@ -1,0 +1,9 @@
+https://idcs-4d84dfcdca67459f98249078399a8312.identity.oraclecloud.com
+
+Client ID
+a4553a5d256540fdafed6c0abaf5c8ec
+
+
+Client Secret
+
+b703e333-31d3-409a-b2c5-e265cc6b01da
