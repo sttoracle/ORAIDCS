@@ -22,20 +22,11 @@ Here is the list of topics we will cover in the demonstration -
 * User On-boarding 
 	* [Enterprise Directory Synchronization](contents/UO-EDS.md)
 	* [Delimited File](contents/UO-File.md)
-	* [API](contents/UO-API.md)
-
-* Integrate Apps
-	* [SAML compliant Application](contents/IA-SAML.md)
 
 * [Multi-Factor Authentication](contents/MFA.md)
 
-* Branding and Login Customization
-
-* Reporting and Diagnostics
-
-* OpenID and OAuth Service Provider
-
-* Programmatic Access
+* Integrate Apps
+	* [SAML compliant Application](contents/IA-SAML.md)
 
 * **B2C:** [Self-Registration](contents/SelfRegister.md)
 	

@@ -11,15 +11,13 @@ A User's password is **NOT** synchronized. So users will need to either -
 
 ## Persona
 
-Administrators, End-Users
+Administrators
 
 ## Demo Logistics
 
 Windows Server 2012 equipped with .NET framework 4.6+. The script has been tested with Windows 2012 64-bit Server.
 
-## Active Directory Setup 
-
-`(Persona: Administrators)`
+## Active Directory Setup
 
 #### Installing Active Directory
 * Log into Active Directory Machine as Administrator
@@ -60,8 +58,6 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 
 ## Configure Identity Bridge
-
-`(Persona: Administrators)`
 
 * Log into IDCS Admin Console 
 
@@ -150,8 +146,6 @@ Windows Server 2012 equipped with .NET framework 4.6+. The script has been teste
 
 ## Initial Synchronization
 
-`(Persona: Administrators)`
-
 * Click **Import** to manually start the import job.
 
 * Refresh the page until the synchronization is completed.
@@ -170,8 +164,6 @@ How many groups failed to import.
 ![](images/UO-EDS-32.jpg)
 
 ## Verify Synchronization
-
-`(Persona: Administrators)`
 
 * In the IDCS admin console, click **Users**. 
 
@@ -192,8 +184,6 @@ How many groups failed to import.
 
 ## Synchronize Changes in Active Directory
 
-`(Persona: Administrators)`
-
 * From IDCS admin console, click the group **OurVendor** and then click **Users** tab. Ensure that no user is assigned to the group.
 
 ![](images/UO-EDS-36.jpg)
@@ -212,36 +202,15 @@ How many groups failed to import.
 
 ![](images/UO-EDS-41.jpg)
 
-## Activate IDCS Account
-
-`(Persona: End-Users)`
+## Verify Activation Email
 
 * Login to Gmail as [demoidcs@gmail.com](). Go to the **User1** label. Verify that there is an activation email from IDCS for **Danny Crane**
 
 ![](images/UO-EDS-42.jpg)
 
-* Open and review the email. Click on the **Activate Your Account** button.  
+* Open and review the email. Do not click on the **Activate Your Account** button yet. We will do that during User initial login flow. 
  
 ![](images/UO-EDS-43.jpg)
-
-* IDCS Change Password page will open up. Provide a suitable password that matches the listed **Password Criteria**. Click on **Submit**.
-
-![](images/UO-EDS-44.jpg)
-
-* Verify that you are redirected to IDCS **MyApps** portal, which would be empty for now.
-
-![](images/UO-EDS-45.jpg)
-
-![](images/UO-EDS-46.jpg)
-
-* Go to `My Profile` section from menu located top-right
-
-![](images/UO-EDS-47.jpg)
-	
-* Ensure that **Employee** group is visible under **My Access** sub-tab
-	
-![](images/UO-EDS-48.jpg)
-
 
 ## Additional Resources
 
