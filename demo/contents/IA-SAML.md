@@ -75,9 +75,9 @@ Detailed instructions for setting up SAML SSO for Salesforce can be found from [
 
 * Search for **Salesforce** App and Add 
 
-![](images/IA-SAML-12.png)
+![](images/IA-SAML-11.png)
 	
-![](images/IA-SAML-13.png)
+![](images/IA-SAML-12.png)
 
 
 * On the first page of Configuration screen provide the **Organization ID** and **Domain Name** values :
