@@ -23,10 +23,10 @@ Here is the list of topics we will cover in the demonstration -
 	* [Enterprise Directory Synchronization](contents/UO-EDS.md)
 	* [Delimited File](contents/UO-File.md)
 
-* [Multi-Factor Authentication](contents/MFA.md)
-
 * Integrate Apps
 	* [SAML compliant Application](contents/IA-SAML.md)
+
+* [Multi-Factor Authentication](contents/MFA.md)
 
 * **B2C:** [Self-Registration](contents/SelfRegister.md)
 	
