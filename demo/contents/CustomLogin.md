@@ -61,7 +61,7 @@ Select the Admin API "Signin"
 
 ![](images/CustomLogin-8.png)
 
-* Activate the app.
+* **Activate** the app.
 
 ![](images/CustomLogin-9.png)
 ![](images/CustomLogin-10.png)
