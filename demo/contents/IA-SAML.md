@@ -1,128 +1,144 @@
 # Integrate Apps - SAML
 
+Oracle Identity Cloud Service(IDCS) provides integration with any service that can be integrated via **SAML** (Security Access Markup Language) protocol. Administrations will be able to manage users into various applications via single control panel and end users will be able get to applications via single click.
 
-- Download IDCS Metadata to a local XML file 
+IDCS provides support for standard SAML 2.0 Browser POST Login & Logout Profiles.
+
+In this demo, we will setup integration with **Salesforce** using SAML.
+
+## Scenario
+
+IDCS acting as Identity Provider for a Salesforce org. Once integrated Salesforce will authenticate users using IDCS. Also, users will be able to request access to Salesforce and launch Salesforce from a unified application portal in IDCS console.
+
+In SAML terminology, IDCS will act as **IdP** (Identity Provider) and Salesforce org as **SP** (Service Provider also known as a Relying Party)
+
+## Persona
+
+Administrators, End-Users
+
+## Demo Logistics
+
+* A Salesforce developer account is needed. One can be obtained from [here](https://developer.salesforce.com/signup?d=70130000000td6N).
+
+For the demo, use the existing account [demoidcs@gmail.com]()
+
+* A custom domain needs to be setup in Salesforce for SP-initiated SSO to work i.e. SSO happens when user directly attempts to access Salesforce as opposed to accessing Salesforce App from IDCS MyApps portal (IDP-initiated SSO).
+
+[demoidcs@gmail.com]() has already been configured to leverage the custom domain [https://demoidaas-dev-ed.my.salesforce.com]()
+
+* Download IDCS Metadata to a local XML file. Metadata is available from the following location - [https://<<IDCSHOST>>/fed/v1/metadata](). Need to login using IDCS admin user credentials to access the URL;
 
 	![](images/IA-SAML-1.png)
-
-- Login to salesforce.com tenant with Administrator credentials
-
-- Go to Single Sign-On settings under  Security Controls menu
-
-- Enable Federated Single Sign-On 
-
-	![](images/IA-SAML-2.png)
-
-- Import IDCS Metadata - Use New from Metadata File option
- 
-- Save the configuration 
-
-	![](images/IA-SAML-3.png)
-
-    ![](images/IA-SAML-4.png)
-
-    ![](images/IA-SAML-5.png)
-
-    ![](images/IA-SAML-6.png)
-
-    ![](images/IA-SAML-7.png) Change
-
-    ![](images/IA-SAML-8.png) Change
-
-- Note the Organization ID value 
-
-	![](images/IA-SAML-9.png)  Change
-
-- Note the Tenant Domain Name value 
-
-	![](images/IA-SAML-10.png) Change
-
-- Go to IDCS Admin console -> Applications tab
-
-- Click on Add button and select App Catalog 
-
-	![](images/IA-SAML-11.png)
-
-- Search for Salesforce App and Add 
-
-	![](images/IA-SAML-12.png)
 	
-	![](images/IA-SAML-13.png)
+## Salesforce Setup
+`(Persona: Administrators)`
+
+Detailed instructions for setting up SAML SSO for Salesforce can be found from [Salesforce help article](https://help.salesforce.com/articleView?id=sso_saml.htm&type=5)
 
 
-- On the first page of Configuration screen provide the previously noted Organization ID and Domain Name values
+* Login to the Salesforce developer account.
 
-- Click on Next 
+* From side menu bar, go to **Settings** -> **Identity** -> **Single Sign-On Settings**
 
-	![](images/IA-SAML-14.png)
+![](images/IA-SAML-2.png)
 
-- Click on Finish button  
+* Click on **Edit** and enable **Federated Single Sign-On Using SAML** option
 
-	![](images/IA-SAML-15.png)
+![](images/IA-SAML-3.png)
 
-- Activate the application 
+* Click on **New from Metadata File** button to import IDCS metadata. Select the downloaded metadata file using **Choose File** button. Click on **Create**.
 
-	![](images/IA-SAML-16.png)
+![](images/IA-SAML-4.png)
+![](images/IA-SAML-5.png)
 
-## Assign Apps to Group - (Persona: Administrator)
+* Keep all the default information and click on **Save**
 
-- Go to IDCS Admin Console -> Groups tab 
+![](images/IA-SAML-6.png)
+![](images/IA-SAML-7.png)
+
+* Note the **Organization ID** value. In the demo, the value is - *00D1N000002M18V*
+
+![](images/IA-SAML-8.png)
+
+* Note the Org **Domain Name** value. In the demo, the value is - *demoidaas-dev-ed*
+
+![](images/IA-SAML-9.png)
+	
+## IDCS Setup
+`(Persona: Administrators)`
+
+* Go to IDCS Admin console -> **Applications** tab
+
+* Click on **Add button** and select **App Catalog**
+
+![](images/IA-SAML-10.png)
+
+* Search for **Salesforce** App and Add 
+
+![](images/IA-SAML-11.png)
+	
+![](images/IA-SAML-12.png)
+
+
+* On the first page of Configuration screen provide the **Organization ID** and **Domain Name** values :
+
+```	
+Domain Name : demoidaas-dev-ed
+Organization ID : 00D1N000002M18V
+```
+![](images/IA-SAML-14.png)
+
+* Click on **Next** 
+
+![](images/IA-SAML-15.png)
+
+* Click on **Finish** button  
+
+* **Activate** the application 
+
+![](images/IA-SAML-16.png)
+
+## Assign Apps to Group
+`(Persona: Administrators)`
+
+* Go to IDCS Admin Console -> **Groups** tab 
 
 	![](images/IA-SAML-17.png)
 
-- Add group `Employee`. Check the box `User can request access`. 
+* Add group **Employees**, if not already there. Open the group details page.
 
 	![](images/IA-SAML-18.png)
 
-- Click on `Finish` 
+* Go to the `Access` tab. Click on `Assign`. 
+
+* Select `Salesforce` and confirm 
 
 	![](images/IA-SAML-19.png)
-
-- Go to the `Access` tab. Click on `Assign`. 
-
-- Select `Salesforce` and confirm 
-
+	
 	![](images/IA-SAML-20.png)
 	
-	![](images/IA-SAML-21.png)
 	
+## Verify Apps SSO
+`(Persona: End-Users)`
+
+* Login in IDCS as employee **dcrane**
+		
+* Verify that the following Salesforce applications are visible now on the landing page - **MyApps** portal
+
+```
+Salesforce Application
+Salesforce Chatter
+Salesforce Work.com
+```
 	
-## Request Group - (Persona: End-User)
+![](images/IA-SAML-21.png)
 
-- From MyApps page click on `Add` access request button.
+<blockquote>This is because <b>dcrane</b> is part of Employees group. <b>Salesforce</b> App has been assigned to the <b>Employees</b> group. So any user who is member of this group will automatically get access to all the Salesforce applications</blockquote>
 
-	![](images/IA-SAML-22.png)
+* Click on the **Salesforce Chatter** app. 
 
-- From the **Groups** tab, select `Employee` group
+* Verify that **dcrane** is automatically logged-in to Salesforce Chatter (**SSO**)
 
-	![](images/IA-SAML-23.png)
+![](images/IA-SAML-22.png)
 	
-- Click on `+` sign to request access to the group. Provide justification on the resulting popup page. Click on `OK`
 
-	![](images/IA-SAML-24.png)
-	
-	![](images/IA-SAML-25.png)
-	
-- Go to `My Profile` section from menu located top-right
-
-	![](images/IA-SAML-26.png)
-	
-- Ensure that `Employee` group is visible under **My Access** sub-tab
-	
-	![](images/IA-SAML-27.png)
-	
-- Go to `My Apps` section from menu located top-right
-
-	![](images/IA-SAML-28.png)
-	
-- Ensure that Salesforce applications are visible now on the **MyApps** page
-	
-	![](images/IA-SAML-29.png)
-
-
-## Verify Apps SSO - (Persona: End-User)
-
-- Click on the `Salesforce Chatter` app. 
-- Ensure that user is automatically logged-in to Salesforce Chatter (**SSO**)
-
-	![](images/IA-SAML-30.png)

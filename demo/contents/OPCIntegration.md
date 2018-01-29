@@ -1,10 +1,10 @@
-# Oracle Public Cloud Integration
+# Oracle Public Cloud One-Stop Access
 
 
-### IDCS is baked in Oracle Public Cloud
+### IDCS is baked into Oracle Public Cloud
 
 
-### Access Oracle Cloud Services
+### Accessing Oracle Cloud Services
 
 - Click on **Dashboard** to come back to My Services page again. Display the sidebar by clicking on the bar in the upper left hand corner. then click on **Services** to display available Oracle Cloud Services.
 

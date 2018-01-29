@@ -1,41 +1,12 @@
-# User On-boarding - Delimited File
+# Enterprise/Social Identity Provider Integration
 
+Oracle Identity Cloud Service(IDCS) supports plugging-in external identity provider (**IdP**) for authentication.
 
-### **STEP 1**: Obtain Upload CSV file
+An **identity provider**, known as an **Identity Assertion provider**, provides identifiers for users who want to interact with Oracle Identity Cloud Service using a website that's external to Oracle Identity Cloud Service. 
 
-- Obtain the CSV file **Users.csv** provided here. Inspect the content of the file opening it in your favorite editor.
-	
-	![](images/UO-File-1.png)
-	
-- Make sure that your target End User with proper ***Email Address*** is present on the file. If not there, make necessary changes.
+For example, a website can allow users to log in to Oracle Identity Cloud Service with Google credentials.
 
+IDCS supports external IdP leveraging -
 
-### **STEP 2**: Import File in IDCS
-
-- Go to IDCS Admin console using your Administrator Account credentials as described [here](#adminconsole). Ensure that you are on the **Users** tab
-
-- Click on the **Import** button. 
-
-	![](images/UO-File-2.png)
-	
-- Select the **CSV** file. Click on **Import**
-
-    ![](images/UO-File-3.png)
-
-- Go to the **Jobs** tab in Admin Console. Verify that the Import Job finished successfully. Click on **View
-
-    ![](images/UO-File-4.png)
-    
-- Click on **View Details** button. This will show the detailed information on the ***Import** job. Inspect the details.
-
-    ![](images/UO-File-5.png) 
-
-### **STEP 3**: Verify User Creation
-
-- Go to the **Users** tab in Admin Console. Verify that the new users are visible on the console.
-
-    ![](images/UO-File-6.png)
-
-- Click on your target End-User and verify User's detailed attribute information
-
-    ![](images/UO-File-7.png)
+1. [OpenID Connect based providers](./IDP-Social.md) - commonly called **Social Identity Provider**
+2. [SAML 2.0 Compliant providers]()

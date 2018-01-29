@@ -1,14 +1,12 @@
 # User On-boarding - Delimited File
 
 
-### **STEP 1**: Obtain Upload CSV file
+### **STEP 1**: Obtain Upload CSV files
 
-- Obtain the CSV file **Users.csv** provided here. Inspect the content of the file opening it in your favorite editor.
+- Download the CSV file for [Users](resources/Users.csv) and [Groups](resources/Groups.csv). Inspect the content of the files from your favorite editor.
 	
 	![](images/UO-File-1.png)
 	
-- Make sure that your target End User with proper ***Email Address*** is present on the file. If not there, make necessary changes.
-
 
 ### **STEP 2**: Import File in IDCS
 
@@ -22,7 +20,7 @@
 
     ![](images/UO-File-3.png)
 
-- Go to the **Jobs** tab in Admin Console. Verify that the Import Job finished successfully. Click on **View
+- Go to the **Jobs** tab in Admin Console. Verify that the Import Job finished successfully. Click on **View**
 
     ![](images/UO-File-4.png)
     
