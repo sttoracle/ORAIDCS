@@ -1,6 +1,6 @@
 # Multi Factor Authentication
 
-With **Multi Factor Authentication (MFA)** enabled in Oracle Identity Cloud Service, when a user signs in to an application, they are prompted for their user name and password, which is the first factor – something that they know. The user is then required to provide a second type of verification. This is called **2-Step Verification**. 
+When a user signs in to an application, they are prompted for their user name and password, which is the first factor – something that they know. With **Multi Factor Authentication (MFA)** enabled in Oracle Identity Cloud Service, the user is then required to provide a second type of verification. This is called **2-Step Verification**.
 
 The two factors work together to add an additional layer of security by using either additional information or a second device to verify the user’s identity and complete the login process.
 
