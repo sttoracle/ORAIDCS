@@ -29,5 +29,7 @@ Here is the list of topics we will cover in the demonstration -
 
 * [Multi-Factor Authentication](contents/MFA.md)
 
+* [Enterprise/Social Identity Provider Integration](contents/IDP.md)
+
 * **B2C:** [Self-Registration](contents/SelfRegister.md)
 	
