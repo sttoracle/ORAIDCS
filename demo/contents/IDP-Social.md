@@ -27,10 +27,9 @@ Administrators, End-Users
 
 ## Google Provider Integration
 
-The end-to-end integration and verification is captured in the following video -
+The end-to-end integration and verification process has been is captured in this less than 7 minutes video -
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JU8ArDvzWq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 
 
 ## (Optional) Auth0 Integration
