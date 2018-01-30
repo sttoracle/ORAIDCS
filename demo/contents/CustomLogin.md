@@ -174,6 +174,7 @@ Follow the simple steps below to configure IDCs to leverage the custom login pag
 
 
 ## Verify Custom Login 
+`(Persona: End-Users)`
 
 * From you browser run [http://demo.oracledemo.com:9095/myapp/setdomain?domainName=IDCS-TENANT-NAME&host=.identity.oraclecloud.com](http://demo.oracledemo.com:9095/myapp/setdomain?domainName=IDCS-TENANT-NAME&host=.identity.oraclecloud.com)
 
