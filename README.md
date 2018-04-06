@@ -11,4 +11,4 @@ Get yourself familiar with **IDCS** service
 * <a href="/Oracle-Identity-Cloud-Service/ToolsAndAssets" target="_blank">Tools and Assets</a>
 
 
-For more details see [Oracle Identity Cloud Service](https://cloud.oracle.com/en_US/identity).
+For more details see [Oracle Identity Cloud Service](https://cloud.oracle.com/en_US/identity)
