@@ -1,0 +1,11 @@
+{
+  "name": "idcsdemo",
+  "private": true,
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "angular-chart.js": "1.0.3"
+  }
+}

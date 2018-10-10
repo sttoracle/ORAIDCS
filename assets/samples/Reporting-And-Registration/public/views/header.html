@@ -1,0 +1,34 @@
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="baseController">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="app"><img src="images/logo.png" height=30 width=41></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="app">
+                        <span class="glyphicon glyphicon-home"
+                         aria-hidden="true"></span> Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-show="!showUser"><a id="loginLink" href="/api/login">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                    <li ng-show="!showUser"><a id="loginLink" ui-sref="app.register">
+                    <span class="glyphicon glyphicon-register"></span> Register</a>
+                    </li>
+                    <li ng-show="showUser"><a id="logoutLink" href="/api/logout">
+                    <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                    </li>
+                    <li ng-show="showUser"><a>{{loggedinUser}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>         
+               
+    

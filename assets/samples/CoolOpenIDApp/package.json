@@ -1,0 +1,17 @@
+{
+  "name": "CoolOpenIDApp",
+  "version": "1.0.0",
+  "description": "IDCS Demo OpenID App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "indranil.jha@oracle.com",
+  "dependencies": {
+    "express": "*",
+    "express-session": "*",
+    "jade": "*",
+    "passport": "*",
+    "passport-oauth-oidcs": "*"
+  }
+}

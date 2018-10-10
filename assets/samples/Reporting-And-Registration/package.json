@@ -1,0 +1,24 @@
+{
+  "name": "idcsutil",
+  "version": "1.0.0",
+  "description": "IDCS Custom Reporting and Registration",
+  "main": "server.js",
+  "author": "indranil.jha@oracle.com",
+  "dependencies": {
+    "async": "2.1.2",
+    "body-parser": "*",
+    "connect-ensure-login": "*",
+    "connect-flash": "*",
+    "ejs": "*",
+    "ejs-locals": "*",
+    "express": "*",
+    "express-session": "*",
+    "lodash": "4.14.1",
+    "node-rest-client": "*",
+    "passport": "*",
+    "passport-duo": "0.1.1",
+    "passport-oauth-oidcs": "1.0.1",
+    "querystring": "0.2.0",
+    "thirty-two": "*"
+  }
+}
